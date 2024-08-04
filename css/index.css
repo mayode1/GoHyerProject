@@ -529,29 +529,19 @@ header div li:hover .dropdown5{
 @media (max-width:320px) {
   #herohead{
     line-height: 2.4rem;
-    /* margin-right: -5rem; */
     font-size: 2rem;
   }
 }
 #herotext{
   font-size: 22px;
-  /* border: 2px solid black; */
-  /* margin-top: 15px;
-  margin-right: 6px; */
-  /* line-height: 3rem; */
 }
 #herotext2{
   font-size: 22px;
   color: white;
-  /* border: 2px solid black; */
-  /* margin-top: 15px;
-  margin-right: 6px; */
-  /* line-height: 3rem; */
 }
 #con{
  background-color: #e3eaf2;
  color: #5e5e5e;
- /* height: 12vh; */
  width: 100%;
  border: 1px solid black;
 }
@@ -581,14 +571,26 @@ header div li:hover .dropdown5{
   
 }
 
-
-
+@media (max-width:420px) {
+  #head button{
+   margin-bottom: 7px;
+  }
+  #second{
+    font-size: 17px;
+  }
+}
+@media (max-width:430px) {
+  #head button{
+    margin-bottom: 10px;
+   }
+}
 @media (max-width:390px) {
   #con #picture{
     /* margin-left: 0.7rem; */
     width: 107%;
     margin-left: 2px;
   }
+
   #con #picture2{
     /* margin-left: 0.7rem; */
     width: 107%;
