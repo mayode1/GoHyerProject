@@ -570,7 +570,9 @@ header div li:hover .dropdown5{
   }
   
 }
-
+#btnn:hover{
+  color: white;
+}
 @media (max-width:420px) {
   #head button{
    margin-bottom: 7px;

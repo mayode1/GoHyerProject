@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Figtree&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri&display=swap');
-
 * {
   margin: 0;
   padding: 0;
@@ -16,7 +15,8 @@ body{
 }
 
 /* first navbar */
-.head1{
+/* first navbar */
+header{
   /* position: fixed; */
   padding-right: 2em;
   padding-left: 4em;
@@ -31,51 +31,50 @@ body{
   z-index: 1000;
   height: 13vh;
 }
-.head1 .logo{
+header .logo{
   font-weight: bolder;
   font-size: 25px;
   columns: #333;
 }
-.head1 .navbar ul{
+header .navbar ul{
   list-style: none;
 
 }
-.head1 .navbar ul li {
+header .navbar ul li {
   position: relative;
   float: left;
   top: 10;
- 
 }
-.head1 .navbar ul li a{
+header .navbar ul li a{
   text-decoration: none;
-  font-weight: 200;
 }
-.head1 .navbar ul li .workers{
+header .navbar ul li .workers{
   position: absolute;
-  left: -25;
+  left: -50;
+  /* right: 140; */
   width: 210px;
   outline: none;
   background: #4d79ac;
   display: none;
-  /* z-index: 1; */
+  z-index: 1;
 }
-.head1 .navbar ul li .workers li{
+header .navbar ul li .workers li{
   width: 100%;
   border-top: 1px solid rgba(0,0,0,.1)
 }
-.head1 .navbar ul li .workers li a{
+header .navbar ul li .workers li a{
   font-size: 18px;
   color: white;
   font-weight: 400;
 }
-.head1 .navbar ul li .workers li a:hover{
+header .navbar ul li .workers li a:hover{
   /* background-color: rgba(255, 255, 255, 0.971); */
   /* color: black; */
   width: 100%;
   font-weight: 500;
 }
 
-.head1 .navbar ul li a{
+header .navbar ul li a{
  font-size: 20px;
  padding: 20px;
  color: #000000;
@@ -86,41 +85,42 @@ body{
   background-color: #333;
   color: white;
 } */
-.head1 .navbar ul li ul{
+header .navbar ul li ul{
   position: absolute;
   left: 0;
+  /* right: 0; */
   width: 300px;
   outline: none;
   background: #604d8d;
   display: none;
-  /* z-index: 1; */
+  z-index: 1;
 }
-.head1 .navbar ul li ul li{
+header .navbar ul li ul li{
   width: 100%;
   border-top: 1px solid rgba(0,0,0,.1);
 }
-.head1 .navbar ul li ul li a{
+header .navbar ul li ul li a{
   font-size: 18px;
   color: white;
   width: 100%;
   font-weight: 400;
 }
-.head1 .navbar ul li ul li a:hover{
+header .navbar ul li ul li a:hover{
   /* background-color: rgba(255, 255, 255, 0.971); */
   /* color: black; */
   width: 100%;
   font-weight: 400;
 }
-.head1 .navbar ul li ul li ul{
+header .navbar ul li ul li ul{
   left: 200px;
   top: 0;
 }
-.head1 .navbar ul li ul li a{
+header .navbar ul li ul li a{
   font-weight: 200;
   width: 100%;
 }
-.head1 .navbar ul li:focus-within > ul,
-.head1 .navbar ul li:hover > ul{
+header .navbar ul li:focus-within > ul,
+header .navbar ul li:hover > ul{
   display: initial;
 }
 
@@ -129,77 +129,99 @@ body{
 }
 
 
-.head1 label{
+header label{
   font-size: 20px;
   color: #333;
   cursor: pointer;
   display: none;
 }
 
-
+#mo{
+  display: none;
+}
 
 
 @media (max-width:991px) {
   
-  .head1{
+  header{
       padding: 10px;
   }
 
-  .head1 label{
+  header label{
     display: initial;  
   }
 
-  .head1 .navbar{
+  header .navbar{
       position: absolute;
-      top: 70; left: 0; right: 0;
+      top: 75; left: 0; right: 0;
       background: #e5e5e5;
-      border-top: 1px solid  rgba(0,0,0,.1);
+      /* border-top: 1px solid  rgba(0,0,0,.1); */
       display: none;
+      z-index: 1000;
   }
 
-  .head1 .navbar ul li{
+  header .navbar ul li{
       width: 100%;
-  } 
-  .head1 .navbar ul li ul{
-      position: relative;
-      padding: 0;
-      width: 100%;
-      /* margin-right: 14rem; */
+      /* margin-bottom: 19px; */
+      line-height: 15px;
   }
-  .head1 .navbar ul li .workers{
+
+  header .navbar ul li a{
+    right: 0;
+    left: -20;
+    position: relative;
+    margin-top: -6px;
+    right: 130;
+  }
+  header .navbar ul li ul{
+    padding: 0;
+      position: relative;
+      width: 100%;
+  }
+  header .navbar ul li .workers{
       position: relative;
       width: 100%;
       left: 0;
-
+      padding: 0;
   }
-  /* .head1 .navbar ul li .workers li{
+  /* header .navbar ul li .workers li{
      background-color:  #4d79ac; 
   } */
-  .head1 .navbar ul li .workers li a{
-    color: #000;
+
+
+  @media (max-width:800px) {
+     header{
+      height: 80px!important;
+     }
+      #head{
+        height: 70px!important;
+      }
   }
-  /* .head1 .navbar ul li ul li{
+
+  header .navbar ul li .workers li a{
+    color: black;
+    font-weight: 500;
+  }
+  /* header .navbar ul li ul li{
       background: #604d8d; 
   } */
-
-  .head1 .navbar ul li ul li ul{
-      width: 100%!important;
+  header .navbar ul li ul li a{
+    color: #000;
+    font-weight: 500;
+  }
+  header .navbar ul li ul li ul{
+      width: 100%;
       left: 0;
   }
-  .head1 .navbar ul li ul li a{
-    color: black;
-  }
 
-  .head1 #menu-bar:checked ~ .navbar{
+  header #menu-bar:checked ~ .navbar{
       display: initial!important;
   }
 
 }
- 
 
-
- /* second navbar */
- #head{
+/* second navbar */
+#head{
   background-color: rgb(229, 229, 229);
   /* display: flex; */
   /* justify-content: space-between; */
@@ -211,33 +233,43 @@ body{
   header{
     padding: 7px;
   }
-
 }
 
-@media (max-width: 800px) {
+@media (max-width: 840px) {
   header ul li a{
     display: none;
   }
+    #head{
+      height: 75px;
+    }
 
+    #head button{
+      margin-bottom: -1px;
+    }
+
+    header{
+      height: 120px;
+    }
 }
-@media (max-width: 833px) {
-  header ul li a{
-    display:  block!important;
-    margin-bottom: -10px;
+@media (max-width: 450px){
+  #head button{
+    margin-bottom: 4px;
   }
 }
 @media (max-width: 450px) {
-header{
+#head{
  padding: 5px;
+ height: 70px;
 }
 }
 
 @media (max-width: 240px) {
-header{
+#head{
   /* height: 3vh; */
   padding: 3px; 
 }
 }
+
 
 
 header button{
@@ -250,25 +282,31 @@ header button{
 @media (max-width: 840px) {
   header button{
     padding: 8px;
+    margin-bottom: 9px;
+    border: 2px solid rgb(5, 5, 116);
   }
 
 }
-@media (max-width: 450px) {
-  header button{
-    padding: 6px;
-    border: 1px solid rgb(5, 5, 116);
-    border-radius: 12px;
-  }
 
-}
+
 @media (max-width: 450px) {
   header button{
     border: 1px solid rgb(5, 5, 116);
   border-radius: 12px;
   padding: 6px;
   margin-left: 10px;
+  margin-bottom: 9px;
   }
 
+}
+@media (max-width: 350px){
+  header button{
+    border: 1px solid rgb(5, 5, 116);
+    /* border: none; */
+    border-radius: 12px;
+    margin-bottom: 9px;
+    }
+   
 }
 @media (max-width: 240px) {
  /* #head button{
@@ -293,6 +331,9 @@ button a{
   }
 
 }
+
+
+
 
 
 ul li{
@@ -380,6 +421,8 @@ header div li:hover .dropdown5{
   display: block;
   position: absolute; 
 }
+ 
+/* end of second navbar */
  
 /* end of second navbar */
 
