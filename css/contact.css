@@ -235,6 +235,11 @@ header label{
   }
 }
 
+@media (max-width: 884px){
+  #head{
+    height: 80px;
+  }
+}
 @media (max-width: 840px) {
   header ul li a{
     display: none;
@@ -243,9 +248,9 @@ header label{
       height: 75px;
     }
 
-    #head button{
+    /* #head button{
       margin-bottom: -1px;
-    }
+    } */
 
     header{
       height: 120px;

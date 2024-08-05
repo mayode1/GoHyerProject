@@ -218,9 +218,22 @@ header label{
   }
 
 }
+@media (max-width: 770px){
+  #head{
+    height: 75px;
+  }
+}
+@media (max-width: 822px){
+  #head{
+    height: 63px;
+    margin-top: -10px;
+  }
+
+}
+
 @media (max-width: 450px) {
 #head{
- padding: 5px;
+ height: 65px;
 }
 }
 
